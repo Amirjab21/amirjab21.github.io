@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/amirjab21.github.io/static/css/main.afe34e1f.css",
-    "main.js": "/amirjab21.github.io/static/js/main.0c1e5887.js",
-    "static/js/453.b05d8aa5.chunk.js": "/amirjab21.github.io/static/js/453.b05d8aa5.chunk.js",
-    "static/media/Crowdmuse.png": "/amirjab21.github.io/static/media/Crowdmuse.988a6b62b3aaa0e51bef.png",
-    "static/media/bookey.png": "/amirjab21.github.io/static/media/bookey.eb4f2d5e2401912aec97.png",
-    "static/media/threejs-playground.png": "/amirjab21.github.io/static/media/threejs-playground.dee09fb91463c6a69aa1.png",
-    "static/media/gray-amir.png": "/amirjab21.github.io/static/media/gray-amir.c9ac3007e646a3d5dc9d.png",
-    "static/media/accent-game.png": "/amirjab21.github.io/static/media/accent-game.b163499205e9977d29d4.png",
-    "static/media/mental-map.png": "/amirjab21.github.io/static/media/mental-map.640bd68df469b0124b6f.png",
-    "static/media/bg-light.png": "/amirjab21.github.io/static/media/bg-light.bac0efb485244a522981.png",
-    "static/media/phonemes.png": "/amirjab21.github.io/static/media/phonemes.5f3c89cad05325675210.png",
-    "static/media/dissertation.png": "/amirjab21.github.io/static/media/dissertation.a39345a453f5b80c92ac.png",
-    "index.html": "/amirjab21.github.io/index.html",
-    "main.afe34e1f.css.map": "/amirjab21.github.io/static/css/main.afe34e1f.css.map",
-    "main.0c1e5887.js.map": "/amirjab21.github.io/static/js/main.0c1e5887.js.map",
-    "453.b05d8aa5.chunk.js.map": "/amirjab21.github.io/static/js/453.b05d8aa5.chunk.js.map"
+    "main.css": "/static/css/main.cd37b571.css",
+    "main.js": "/static/js/main.0ecd7064.js",
+    "static/js/453.b05d8aa5.chunk.js": "/static/js/453.b05d8aa5.chunk.js",
+    "static/media/Crowdmuse.png": "/static/media/Crowdmuse.988a6b62b3aaa0e51bef.png",
+    "static/media/bookey.png": "/static/media/bookey.eb4f2d5e2401912aec97.png",
+    "static/media/threejs-playground.png": "/static/media/threejs-playground.dee09fb91463c6a69aa1.png",
+    "static/media/gray-amir.png": "/static/media/gray-amir.c9ac3007e646a3d5dc9d.png",
+    "static/media/accent-game.png": "/static/media/accent-game.b163499205e9977d29d4.png",
+    "static/media/mental-map.png": "/static/media/mental-map.640bd68df469b0124b6f.png",
+    "static/media/bg-light.png": "/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/phonemes.png": "/static/media/phonemes.5f3c89cad05325675210.png",
+    "static/media/dissertation.png": "/static/media/dissertation.a39345a453f5b80c92ac.png",
+    "index.html": "/index.html",
+    "main.cd37b571.css.map": "/static/css/main.cd37b571.css.map",
+    "main.0ecd7064.js.map": "/static/js/main.0ecd7064.js.map",
+    "453.b05d8aa5.chunk.js.map": "/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afe34e1f.css",
-    "static/js/main.0c1e5887.js"
+    "static/css/main.cd37b571.css",
+    "static/js/main.0ecd7064.js"
   ]
 }
