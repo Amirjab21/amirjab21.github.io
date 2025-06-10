@@ -4,4 +4,8 @@ export { default as Main } from "./Main";
 export { default as Expertise } from "./Expertise";
 export { default as Timeline } from "./Timeline";
 export { default as Project } from "./Project";
+export { default as Blog } from "./Blog";
+export { default as BlogList } from "./BlogList";
+export { default as BlogPost } from "./BlogPost";
+export { default as HomePage } from "./HomePage";
 export { default as Contact } from "./Contact";

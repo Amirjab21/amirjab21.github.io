@@ -1,27 +1,88 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import '../assets/styles/Main.scss';
+import Amirimage from '../assets/images/gray-amir.png'
 
 function Main() {
+  const jobTitles = ["Software Developer", "Machine Learning Engineer", "Social Scientist", "Entrepreneur"];
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentTitle = jobTitles[currentIndex];
+    
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (currentText.length < currentTitle.length) {
+          setCurrentText(currentTitle.substring(0, currentText.length + 1));
+        } else {
+          // Finished typing, wait then start deleting
+          setTimeout(() => setIsDeleting(true), 1500);
+        }
+      } else {
+        // Deleting
+        if (currentText.length > 0) {
+          setCurrentText(currentTitle.substring(0, currentText.length - 1));
+        } else {
+          // Finished deleting, move to next title
+          setIsDeleting(false);
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % jobTitles.length);
+        }
+      }
+    }, isDeleting ? 50 : 100); // Faster deletion than typing
+
+    return () => clearTimeout(timeout);
+  }, [currentText, currentIndex, isDeleting, jobTitles]);
 
   return (
-    <div className="container">
-      <div className="about-section">
-        <div className="image-wrapper">
-          <img src="https://my-aws-assets.s3.us-west-2.amazonaws.com/portfolio-img/avatar_circle.jpeg" alt="Avatar" />
-        </div>
-        <div className="content">
-          <div className="social_icons">
-            <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+    <div className="w-full mb-18">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 justify-center items-start w-full h-fit pt-28 lg:pt-36 px-6 pb-6 bg-repeat-no-repeat bg-cover bg-fixed bg-center dark:bg-black/20">
+        <div className="flex flex-col items-center w-full lg:items-end lg:w-fit z-[2] mb-8 lg:mb-0">
+          <div className="mb-4 lg:mb-5">
+            <img 
+              src={Amirimage} 
+              alt="Avatar" 
+              className="w-24 lg:w-48 h-24 lg:h-48 rounded-full object-cover"
+            />
           </div>
-          <h1>Yuji Sato</h1>
-          <p>Full Stack Engineer</p>
+          <div className="text-center lg:text-right flex justify-center lg:justify-end flex-col">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold m-0 mb-2 lg:mb-3 leading-tight">
+              Amir <br/>Jabarivasal
+            </h1>
+            <p className="text-lg lg:text-xl m-0 mb-4 lg:mb-5">
+              {currentText}
+              <span className="animate-pulse font-bold ml-1">|</span>
+            </p>
+            <div className="flex flex-row gap-4 text-white lg:hidden justify-center">
+              <a href="https://github.com/Amirjab21" target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform duration-200">
+                <GitHubIcon className="text-3xl"/>
+              </a>
+              <a href="https://www.linkedin.com/in/amir-jabarivasal-a7368556/" target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform duration-200">
+                <LinkedInIcon className="text-3xl"/>
+              </a>
+            </div>
+            <div className="hidden lg:flex flex-row gap-4 text-white self-end">
+              <a href="https://github.com/Amirjab21" target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform duration-200">
+                <GitHubIcon className="text-3xl"/>
+              </a>
+              <a href="https://www.linkedin.com/in/amir-jabarivasal-a7368556/" target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform duration-200">
+                <LinkedInIcon className="text-3xl"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div className="max-w-full lg:max-w-2xl z-[2] mt-0 self-center">
+          <div className="space-y-5">
+            <p className="text-base lg:text-lg leading-relaxed text-white/90">
+              A curious, entrepreneurial builder who has advanced skills in software, machine learning, economics, cryptography and many years building startups.
+              <br/>
+              <br/>
+              I love to learn and I love to teach. I think there is great value in being multidisciplinary which is why I have branched out from social science into tech. My latest obsessions are linguistics and ML-enabled precision healthcare.
+            </p>
 
-          <div className="mobile_social_icons">
-            <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
         </div>
       </div>

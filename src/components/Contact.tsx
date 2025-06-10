@@ -50,12 +50,12 @@ function Contact() {
   };
 
   return (
-    <div id="contact">
-      <div className="items-container">
-        <div className="contact_wrapper">
-          <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
-          <Box
+    <div id="contact" className='contact'>
+      <div className="flex flex-col w-full align-center justify-center">
+        <div className="flex flex-col items-center text-center">
+          <h1 className="text-3xl font-bold text-center mb-16">Contact me</h1>
+          <p>I love to chat, let's make something special together -- amir1jab [@gmail.com]</p>
+          {/* <Box
             ref={form}
             component="form"
             noValidate
@@ -106,7 +106,7 @@ function Contact() {
             <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
               Send
             </Button>
-          </Box>
+          </Box> */}
         </div>
       </div>
     </div>

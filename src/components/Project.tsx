@@ -7,65 +7,92 @@ import mock05 from '../assets/images/mock05.png';
 import mock06 from '../assets/images/mock06.png';
 import mock07 from '../assets/images/mock07.png';
 import mock08 from '../assets/images/mock08.png';
-import mock09 from '../assets/images/mock09.png';
-import mock10 from '../assets/images/mock10.png';
+import thesis from "../assets/images/dissertation.png"
+import mock10 from '../assets/images/accent-game.png';
+import Crowdmuse from "../assets/images/Crowdmuse.png"
+import mentalmap from "../assets/images/mental-map.png"
+import phonemes from "../assets/images/phonemes.png"
+import bookey from "../assets/images/bookey.png"
+import threeJS from "../assets/images/threejs-playground.png"
 import '../assets/styles/Project.scss';
 
+interface ProjectData {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  backgroundColor: string;
+}
+
 function Project() {
+    const projects: ProjectData[] = [
+        {
+            title: "Accent Game",
+            description: "Designed my own neural network architecture combining CNNs, attention and fourier transforms to create a classifier for accents. Built a fun game where you learn to imitate other accents. Played by over 500 people. Looking for collaborators",
+            image: mock10,
+            link: "https://accentgame.xyz",
+            backgroundColor: "bg-pink-100"
+        },
+        {
+            title: "Language pronunciation app",
+            description: "Used Wav2Vec2 with forced alignment and the e-speak phonemizer to built a prototype of an app that helps people improve their pronunciation",
+            image: phonemes,
+            link: "https://accentgame.xyz/phoneme",
+            backgroundColor: "bg-blue-100"
+        },
+        {
+            title: "Crowdmuse",
+            description: "Co-founder/CTO of a startup that uses blockchain to enable transparency of fashion supply chains. Raised VC money, built partnerships with Base, Polygon, Optimism and generated $50,000+ in sales using my own hand-written smart contracts",
+            image: Crowdmuse,
+            link: "http://www.crowdmuse.xyz",
+            backgroundColor: "bg-pink-100"
+        },
+        {
+            title: "Bookey",
+            description: "Book swapping app that connects neighbours using book swaps",
+            image: bookey,
+            link: "https://www.bookey.xyz",
+            backgroundColor: "bg-yellow-100"
+        },
+        {
+            title: "Mental health dashboard",
+            description: "Analysed NHS data and built an interactive dashboard that explores how mental health treatment is changing in the UK",
+            image: mentalmap,
+            link: "https://mental-map-new.vercel.app/",
+            backgroundColor: "bg-green-100"
+        },
+        {
+            title: "ThreeJS experiment personal website",
+            description: "Built a 3D website using ThreeJS and Blender",
+            image: threeJS,
+            link: "https://amir-jabarivasal.vercel.app",
+            backgroundColor: "bg-blue-100"
+        },
+        {
+            title: "Public Health/Econometrics Research ",
+            description: "What are the causal impacts of decriminalising drugs? A synthetic control study. I used a novel statistical method called synthetic control where I created a synthetic control to derive a causal impact from Czech Republic's 2014 decriminalisation of narcotics.",
+            image: thesis,
+            link: "https://drive.google.com/file/d/0B0Ow5Iomg8PgUk9kTTFuaWUyRGs/view?resourcekey=0-JalSUywjTA5BSguR8xU4kA",
+            backgroundColor: "bg-blue-100"
+        },
+        
+    ];
+
     return(
     <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
+        <h1 className="text-3xl font-bold text-center mb-16">Personal Projects</h1>
         <div className="projects-grid">
-            <div className="project">
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Filmate AI</h2></a>
-                <p>Developed movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask.</p>
-            </div>
-            <div className="project">
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><h2>High Speed Chase</h2></a>
-                <p>Designed, developed, and launched a 3D multiplayer racing game with C# and Unity. This is available on Itch.io for gamers worldwide to enjoy.</p>
-            </div>
-            <div className="project">
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><h2>Astro Raiders</h2></a>
-                <p>Developed and released a 2D shooting game with C# and Unity. This project is hosted on the Itch.io public marketplace.</p>
-            </div>
-            <div className="project">
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><h2>Datum: Integrated Learning Platform</h2></a>
-                <p>This is an online educational platform that provides high-quality, data science-focused learning resources in the Japanese language. I created the entire platform from scratch using Ruby on Rails.</p>
-            </div>
-            <div className="project">
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>WeManage: Real Estate Asset Management</h2></a>
-                <p>This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript.</p>
-            </div>
-            <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>COVID-19 Case Management</h2></a>
-                <p>Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><h2>Multiple Regression Property Analysis</h2></a>
-                <p>Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
-            </div>
-            <div className="project">
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><h2>Programs of Study</h2></a>
-                <p>Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module.</p>
-            </div>
-            <div className="project">
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><img src={mock02} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><h2>Transfer Evaluation Matrix</h2></a>
-                <p>Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
-                <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
-            </div>
+            {projects.map((project, index) => (
+                <div key={index} className="project">
+                    <a href={project.link} target="_blank" rel="noreferrer">
+                        <div className={`w-full ${project.backgroundColor} rounded-md p-4`} style={{aspectRatio: '85/56'}}>
+                            <img src={project.image} className="zoom w-full h-full object-contain" alt="thumbnail"/>
+                        </div>
+                    </a>
+                    <a href={project.link} target="_blank" rel="noreferrer"><h2 className="text-bold font-bold mb-2 mt-2">{project.title}</h2></a>
+                    <p>{project.description}</p>
+                </div>
+            ))}
         </div>
     </div>
     );

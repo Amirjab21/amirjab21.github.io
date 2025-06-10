@@ -31,11 +31,11 @@
 }
 
 @media screen {
-    @media (max-width: 700px) {
+    @media (max-width: 1024px) {
         .projects-container {
             display: block;
-            padding-left: 5%;
-            padding-right: 5%;
+            padding-left: 24px;
+            padding-right: 24px;
         }
   
         .projects-container .projects-grid {
