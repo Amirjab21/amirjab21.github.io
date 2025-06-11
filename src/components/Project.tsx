@@ -35,7 +35,7 @@ function Project() {
         },
         {
             title: "Language pronunciation app",
-            description: "Used Wav2Vec2 with forced alignment and the e-speak phonemizer to built a prototype of an app that helps people improve their pronunciation",
+            description: "Built an app using Machine Learning to help people improve their pronunciation of multiple languages",
             image: phonemes,
             link: "https://accentgame.xyz/phoneme",
             backgroundColor: "bg-blue-100"

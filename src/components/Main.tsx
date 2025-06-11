@@ -37,8 +37,8 @@ function Main() {
   }, [currentText, currentIndex, isDeleting, jobTitles]);
 
   return (
-    <div className="w-full mb-18">
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 justify-center items-start w-full h-fit pt-28 lg:pt-36 px-6 pb-6 bg-repeat-no-repeat bg-cover bg-fixed bg-center dark:bg-black/20">
+    <div className="w-full lg:mb-0 mb-16 lg:min-h-screen flex flex-row flex-start lg:items-center">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 justify-center items-start w-full h-fit pt-28 lg:pt-0 px-6 pb-6 bg-repeat-no-repeat bg-cover bg-fixed bg-center">
         <div className="flex flex-col items-center w-full lg:items-end lg:w-fit z-[2] mb-8 lg:mb-0">
           <div className="mb-4 lg:mb-5">
             <img 
@@ -76,11 +76,11 @@ function Main() {
         
         <div className="max-w-full lg:max-w-2xl z-[2] mt-0 self-center">
           <div className="space-y-5">
-            <p className="text-base lg:text-lg leading-relaxed text-white/90">
-              A curious, entrepreneurial builder who has advanced skills in software, machine learning, economics, cryptography and many years building startups.
+            <p className="text-base lg:text-2xl leading-relaxed text-white/90">
+              Entrepreneurial builder with expertise in software, ML, cryptography and building startups.
               <br/>
               <br/>
-              I love to learn and I love to teach. I think there is great value in being multidisciplinary which is why I have branched out from social science into tech. My latest obsessions are linguistics and ML-enabled precision healthcare.
+              I'm always trying to learn something new. My latest obsessions are linguistics, ML-enabled healthcare and AI in education.
             </p>
 
           </div>
