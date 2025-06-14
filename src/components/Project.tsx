@@ -14,6 +14,7 @@ import mentalmap from "../assets/images/mental-map.png"
 import phonemes from "../assets/images/phonemes.png"
 import bookey from "../assets/images/bookey.png"
 import threeJS from "../assets/images/threejs-playground.png"
+import ImageCaptioner from "../assets/images/image-captioner.png"
 import '../assets/styles/Project.scss';
 
 interface ProjectData {
@@ -34,8 +35,8 @@ function Project() {
             backgroundColor: "bg-pink-100"
         },
         {
-            title: "Language pronunciation app",
-            description: "Built an app using Machine Learning to help people improve their pronunciation of multiple languages",
+            title: "AI Language learning app",
+            description: "Built an app using Machine Learning to help people improve their pronunciation of multiple languages. Adapted existing phoneme-based transcription models from Meta with forced alignment to give users fine-grained feedback on their pronunciation",
             image: phonemes,
             link: "https://accentgame.xyz/phoneme",
             backgroundColor: "bg-blue-100"
@@ -52,6 +53,13 @@ function Project() {
             description: "Book swapping app that connects neighbours using book swaps",
             image: bookey,
             link: "https://www.bookey.xyz",
+            backgroundColor: "bg-yellow-100"
+        },
+        {
+            title: "ML-powered Image Captioner",
+            description: "I built an encoder-decoder transformer based model that is able to do generate plausible captions for unseen images. I used a pre-trained vision transformer to obtain embeddings for images and then trained my own text encoder/decoder on a tiny image/caption dataset from Flickr. Image processing, adapting existing open source models and building multi-modal models were big take-aways. ",
+            image: ImageCaptioner,
+            link: "https://caption-generator-flickr.streamlit.app",
             backgroundColor: "bg-yellow-100"
         },
         {
